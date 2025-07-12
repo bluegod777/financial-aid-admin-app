@@ -2,10 +2,17 @@
 
 import { useAuth } from '../contexts/AuthContext'
 import { LoginForm } from '../components/LoginForm'
-import { Dashboard } from '../components/Dashboard'
+import { redirect } from 'next/navigation'
+import { useEffect } from 'react'
 
 function AppContent() {
   const { user, loading } = useAuth()
+
+  useEffect(() => {
+    if (user) {
+      redirect('/admin')
+    }
+  }, [user])
 
   if (loading) {
     return (
@@ -15,7 +22,7 @@ function AppContent() {
     )
   }
 
-  return user ? <Dashboard /> : <LoginForm />
+  return user ? null : <LoginForm />
 }
 
 export default function Home() {

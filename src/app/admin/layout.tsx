@@ -10,10 +10,10 @@ export default function AdminLayout({
 }: {
   children: React.ReactNode
 }) {
-  const { user, isAdmin } = useAuth()
+  const { user } = useAuth()
   const [sidebarOpen, setSidebarOpen] = useState(false)
 
-  if (!user || !isAdmin) {
+  if (!user) {
     redirect('/')
   }
 

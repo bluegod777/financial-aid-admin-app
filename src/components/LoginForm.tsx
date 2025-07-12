@@ -45,8 +45,8 @@ export function LoginForm() {
           <div className="mx-auto h-16 w-16 bg-blue-600 rounded-full flex items-center justify-center mb-4">
             <GraduationCap className="h-8 w-8 text-white" />
           </div>
-          <h1 className="text-3xl font-bold text-gray-900">Financial Aid Portal</h1>
-          <p className="mt-2 text-gray-600">Sign in to access your financial aid dashboard</p>
+          <h1 className="text-3xl font-bold text-gray-900">Financial Aid Admin Portal</h1>
+          <p className="mt-2 text-gray-600">Sign in to access the administrative dashboard</p>
         </div>
 
         <Card>

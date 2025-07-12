@@ -56,23 +56,6 @@ class ApiClient {
     return this.request<User>('/api/user/profile')
   }
 
-  async getFundingSources(): Promise<FundingSource[]> {
-    return this.request<FundingSource[]>('/api/funding-sources')
-  }
-
-  async getApplications(): Promise<Application[]> {
-    return this.request<Application[]>('/api/applications')
-  }
-
-  async createApplication(fundingSourceId: string, amountRequested: number): Promise<Application> {
-    return this.request<Application>('/api/applications', {
-      method: 'POST',
-      body: JSON.stringify({
-        funding_source_id: fundingSourceId,
-        amount_requested: amountRequested,
-      }),
-    })
-  }
 
   async getAdminDashboard(): Promise<any> {
     return this.request<any>('/api/admin/dashboard')

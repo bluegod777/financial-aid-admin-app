@@ -39,11 +39,7 @@ export function AdminSidebar({ sidebarOpen = true, setSidebarOpen }: AdminSideba
       lg:translate-x-0 lg:static lg:inset-0
       ${sidebarOpen ? 'translate-x-0' : '-translate-x-full'}
     `}>
-      <div className="lg:hidden flex justify-between items-center p-4">
-        <Link href="/" className="flex items-center text-sm text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">
-          <ArrowLeft className="w-4 h-4 mr-2" />
-          Back to Portal
-        </Link>
+      <div className="lg:hidden flex justify-end items-center p-4">
         <button
           onClick={() => setSidebarOpen?.(false)}
           className="p-2 rounded-md text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
@@ -89,15 +85,6 @@ export function AdminSidebar({ sidebarOpen = true, setSidebarOpen }: AdminSideba
         </ul>
       </nav>
       
-      <div className="p-4 border-t border-gray-200 dark:border-gray-700">
-        <Link 
-          href="/"
-          className="flex items-center space-x-2 text-sm text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
-        >
-          <ArrowLeft className="w-4 h-4" />
-          <span>Back to Student Portal</span>
-        </Link>
-      </div>
     </div>
   );
 }
